@@ -2,390 +2,384 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bhuribhat Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-    <link rel="icon" type="image/png" href="/assets/portfolio.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhuribhat | Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Bhuribhat, a master's degree student focused on machine learning, computer vision, and applied NLP.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav id="desktop-nav" style="background-color:black;">
-        <div class="logo" style="color:white">Bhuribhat Ratanasanguanvongs</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about" style="color:white">About</a></li>
-                <li><a href="#skill" style="color:white">Skills</a></li>
-                <li><a href="#experience" style="color:white">Experiences</a></li>
-                <li><a href="#projects" style="color:white">Projects</a></li>
-                <li><a href="#contact" style="color:white">Contact</a></li>
+    <header class="site-header">
+        <nav class="nav">
+            <a class="brand" href="#home">
+                <span class="brand-mark">BR</span>
+                <span class="brand-copy">
+                    <strong>Bhuribhat Ratanasanguanvongs</strong>
+                    <small>Master's degree student</small>
+                </span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"
+                onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#strengths">Strengths</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </div>
-    </nav>
-    <nav id="hamburger-nav" style="background-color:black;">
-        <div class="logo" style="color:white">Bhuribhat</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#skill" onclick="toggleMenu()">Skills</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experiences</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </div>
-        </div>
-    </nav>
-    <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/profile-pic-1.png" alt="profile picture" class="main-profile" />
-        </div>
-        <div class="section__text">
-            <p class="section__text__p1">Hello, I'm</p>
-            <h1 class="title">Bhuribhat</h1>
-            <p class="section__text__p2">Computer Engineer</p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/resume.pdf')">
-                    Download CV
-                </button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">
-                    Contact Info
-                </button>
-            </div>
-            <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
-                    onclick="location.href='https://www.linkedin.com/in/bhuribhat-ratanasanguanvongs'" />
-                <img src="./assets/github.png" alt="My Github profile" class="icon"
-                    onclick="location.href='https://github.com/Bhuribhat'" />
-            </div>
-        </div>
-    </section>
-    <section id="about">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="about-section-container">
-            <!-- <div class="section__pic-container">
-                <img src="./assets/profile-pic-2.png" alt="Profile picture" class="about-pic" />
-            </div> -->
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-                        <h3>Experience</h3>
-                        <p>Machine Learning <br />Computer Vision</p>
-                    </div>
-                    <div class="details-container">
-                        <img src="./assets/education.png" alt="Education icon" class="icon" />
-                        <h3>Education</h3>
-                        <p>Triam Udom Suksa School<br />Chulalongkorn University</p>
-                    </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-copy">
+                <p class="eyebrow">Machine Learning · Computer Vision · NLP</p>
+                <h1>Building practical AI systems with a research-first mindset.</h1>
+                <p class="lede">
+                    I’m Bhuribhat Ratanasanguanvongs, a master's degree student focused on machine learning, computer
+                    vision,
+                    and large language model workflows. I like turning technical problems into clear,
+                    reliable systems that are easy to understand, validate, and ship.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button button-primary" href="./assets/resume.pdf" target="_blank"
+                        rel="noreferrer">Download CV</a>
+                    <a class="button button-secondary" href="#projects">View Projects</a>
+                    <a class="button button-ghost" href="#contact">Contact Me</a>
                 </div>
-                <div class="text-container">
+
+                <div class="hero-highlights">
+                    <article>
+                        <span>Focus</span>
+                        <strong>Research and execution</strong>
+                    </article>
+                    <article>
+                        <span>Strength</span>
+                        <strong>RAG, fine-tuning, deployment</strong>
+                    </article>
+                    <article>
+                        <span>Interest</span>
+                        <strong>CV, analytics, dashboards</strong>
+                    </article>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="portrait-frame">
+                    <img src="./assets/ProfilePic - 2.png" alt="Portrait of Bhuribhat" class="portrait">
+                </div>
+
+                <div class="floating-card floating-card-top">
+                    <span>Current focus</span>
+                    <strong>LLM fine-tuning and RAG</strong>
+                </div>
+
+                <div class="floating-card floating-card-bottom">
+                    <span>Experience</span>
+                    <strong>ML, CV, research, deployment</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="about section" id="about">
+            <div class="section-heading" data-reveal>
+                <p class="eyebrow">About</p>
+                <h2>Research-driven, product-minded, and detail-oriented.</h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="panel intro-panel" data-reveal>
                     <p>
-                        As a graduated computer engineering student at Chulalongkorn University, 
-                        I am passionate about the field of Data Science and Machine Learning.
-                        In addition to my academic pursuits in engineering, I am actively engaged in expanding my expertise in Computer Vision and Natural Language Processing (NLP). 
-                        Currently immersed in learning advanced techniques such as LLM fine-tuning and RAG (Retrieval-Augmented Generation).
-                        I am committed to continuous learning and growth, seeking opportunities to apply 
-                        my engineering background to the exciting and evolving domains of Data Science and Machine Learning.
+                        I’m a master's degree student with hands-on experience in machine learning, computer
+                        vision, and applied NLP. My work style is grounded in experimentation, but always tied
+                        to practical outcomes that make the result easier to trust and use.
+                    </p>
+                    <p>
+                        I enjoy taking ideas from research through prototyping and implementation, then refining
+                        them into polished, dependable systems. Across academic projects, internships, and thesis
+                        work, I’ve contributed to data preparation, model development, evaluation, and delivery.
+                    </p>
+                    <p>
+                        I’m especially interested in applied AI that solves real problems well: models with
+                        clear behavior, interfaces that feel usable, and engineering decisions that hold up in
+                        production or research settings.
                     </p>
                 </div>
-            </div>
-        </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#skill'" />
-    </section>
-    <section id="skill">
-        <p class="section__text__p1">See My</p>
-        <h1 class="title">Skills</h1>
-        <div class="skill-details-container">
-            <div class="about-containers">
-                <div class="details-container">
-                    <h2 class="skill-sub-title">Deep Learning</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="icon" class="icon" />
-                            <div>
-                                <h3>Scikit Learn</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="icon" class="icon" />
-                            <div>
-                                <h3>TensorFlow</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="icon" class="icon" />
-                            <div>
-                                <h3>PyTorch</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="icon" class="icon" />
-                            <div>
-                                <h3>NumPy</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="icon" class="icon" />
-                            <div>
-                                <h3>Pandas</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="icon" class="icon" />
-                            <div>
-                                <h3>OpenCV</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
+
+                <div class="panel stats-panel" data-reveal>
+                    <div>
+                        <span class="stat-label">Education</span>
+                        <strong>Chulalongkorn University</strong>
                     </div>
-                </div>
-                <div class="details-container">
-                    <h2 class="skill-sub-title">Tools & Technologies</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="icon" class="icon" />
-                            <div>
-                                <h3>AWS</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="icon" class="icon" />
-                            <div>
-                                <h3>Power Bi</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="icon" class="icon" />
-                            <div>
-                                <h3>MySQL</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="icon" class="icon" />
-                            <div>
-                                <h3>MongoDB</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="icon" class="icon" />
-                            <div>
-                                <h3>Docker</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="icon" class="icon" />
-                            <div>
-                                <h3>Git</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
+                    <div>
+                        <span class="stat-label">Core areas</span>
+                        <strong>ML, CV, NLP, RAG</strong>
+                    </div>
+                    <div>
+                        <span class="stat-label">Working style</span>
+                        <strong>Analytical, practical, collaborative</strong>
                     </div>
                 </div>
             </div>
-        </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
-    </section>
-    <section id="experience">
-        <p class="section__text__p1">Explore My</p>
-        <h1 class="title">Experiences</h1>
-        <div class="skill-details-container">
-            <div class="about-containers">
-                <div class="details-container color-container">
-                    <h2 class="skill-sub-title">Capstone Project (Senior Project)</h2>
-                    <div class="experience-container">
-                        <div class="experience-container">
-                            <img src="./assets/nectec.png" alt="icon" class="organize-logo" />
-                            <img src="./assets/datamind.jpg" alt="icon" class="organize-logo" />
-                            <img src="./assets/chulalongkornpng.png" alt="icon" class="organize-logo" />
-                        </div>
-                        <div>
-                            <h3>Reliable Domain-Specific Chatbot for Thai Language</h3>
-                            <li>Using Large Language Models (LLMs) with LangChain</li>
-                            <li>Chatbot Development Using RAG Method</li>
-                            <li>Thai Law Dataset Preparation for LLM Fine-Tuning</li>
-                            <li>Deployment on LINE Official Account</li>
-                            <li>Utilize HPC for finetuning LLMs</li>
-                            <li>August 2023 - May 2024</li>
-                        </div>
-                    </div>
-                </div>
+        </section>
+
+        <section class="section" id="strengths">
+            <div class="section-heading" data-reveal>
+                <p class="eyebrow">Strengths</p>
+                <h2>Core strengths at a glance.</h2>
             </div>
-        </div>
-        <div class="skill-details-container">
-            <div class="about-containers">
-                <div class="details-container color-container">
-                    <h2 class="skill-sub-title">Internship</h2>
-                    <div class="experience-container">
-                        <img src="./assets/bitstudio.png" alt="icon" class="organize-logo" />
-                        <div>
-                            <h3>Bit.studio</h3>
-                            <li>Machine Learning & Computer Vision Engineer</li>
-                            <li>Utilize YOLO for Multi-pose Estimation</li>
-                            <li>Google I/O Kaggle ASL fingerspelling</li>
-                            <li>Multimodal Generative AI for Video Generation</li>
-                            <li>May 2023 - July 2023</li>
-                        </div>
-                    </div>
-                </div>
-                <div class="details-container">
-                    <h2 class="skill-sub-title">Academic</h2>
-                    <div class="experience-container">
-                        <img src="./assets/chulalongkornpng.png" alt="icon" class="organize-logo" />
-                        <div>
-                            <h3>PET-CT brain scan, 2023</h3>
-                            <li>Individual Study</li>
-                            <li>PyTorch Implementation of Siamese U-Net</li>
-                            <li>Image Semantic Segmentation</li>
-                            <li>Worked collaboratively within a diverse team </li>
-                            <li>January 2023 - April 2023</li>
-                        </div>
-                    </div>
-                </div>
-                <div class="details-container">
-                    <h2 class="skill-sub-title">Academic</h2>
-                    <div class="experience-container">
-                        <img src="./assets/chulalongkornpng.png" alt="icon" class="organize-logo" />
-                        <div>
-                            <h3>NLP Individual Study, 2023</h3>
-                            <li>Teacher Assistant of the Individual Study Group</li>
-                            <li>LangChain Integration of open-source LLM</li>
-                            <li>Using RAG with Domain Specific Knowledge</li>
-                            <li>Worked collaboratively within a diverse team</li>
-                            <li>August 2023 - December 2023</li>
-                        </div>
-                    </div>
-                </div>
+
+            <div class="feature-grid">
+                <article class="feature-card" data-reveal>
+                    <h3>Machine learning</h3>
+                    <p>Scikit-learn, TensorFlow, PyTorch, NumPy, and Pandas for practical model work.</p>
+                </article>
+                <article class="feature-card" data-reveal>
+                    <h3>Computer vision</h3>
+                    <p>OpenCV, segmentation, detection, and multimodal prototyping.</p>
+                </article>
+                <article class="feature-card" data-reveal>
+                    <h3>LLM applications</h3>
+                    <p>RAG pipelines, domain chatbots, and fine-tuning workflows for real use cases.</p>
+                </article>
+                <article class="feature-card" data-reveal>
+                    <h3>Tools and delivery</h3>
+                    <p>AWS, Docker, Git, MySQL, MongoDB, and Power BI for usable systems.</p>
+                </article>
             </div>
-        </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
-    </section>
-    <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="skill-details-container">
-            <div class="about-containers">
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/project-1.gif" alt="Project 1" class="project-img" />
-                    </div>
-                    <h2 class="skill-sub-title project-title">Real-time Car Detection</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Bhuribhat/Vehicle-Detection-Project'">
-                            Github
-                        </button>
-                    </div>
-                </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/project-4.gif" alt="Project 4" class="project-img" />
-                    </div>
-                    <h2 class="skill-sub-title project-title">ASL fingerspelling keyboard</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Bhuribhat/ASL-Finger-Spelling-To-Text'">
-                            Github
-                        </button>
-                    </div>
-                </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/project-5.gif" alt="Project 5" class="project-img" />
-                    </div>
-                    <h2 class="skill-sub-title project-title">Video to Animation</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Bhuribhat/Intern_Video_To_8bit_Anime'">
-                            Github
-                        </button>
-                    </div>
-                </div>
+        </section>
+
+        <section class="section" id="experience">
+            <div class="section-heading" data-reveal>
+                <p class="eyebrow">Experience</p>
+                <h2>Work experience.</h2>
             </div>
-            <div class="about-containers">
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
+
+            <div class="timeline">
+                <article class="timeline-item" data-reveal>
+                    <div class="timeline-meta">
+                        <span class="timeline-role">AI Research Scientist</span>
+                        <span class="timeline-time">March 2025 - Present</span>
                     </div>
-                    <h2 class="skill-sub-title project-title">Traffy Fondue Clustering</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Bhuribhat/Traffy-Clustering'">
-                            Github
-                        </button>
+                    <h3>IntelliExo - Master's Degree Thesis</h3>
+                    <p>Conducted thesis research using OpenClaw and NemoClaw, 
+                        Coordinated research progress reports with the NVIDIA Singapore team.</p>
+                    <ul>
+                        <li>Research and exploratory analysis</li>
+                        <li>Experimentation, iteration, and review</li>
+                        <li>Presentation and manuscript support</li>
+                    </ul>
+                    <div class="timeline-tags">
+                        <span>NVIDIA</span>
+                        <span>DataMind</span>
+                        <span>Chulalongkorn University</span>
                     </div>
-                </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
+                </article>
+
+                <article class="timeline-item" data-reveal>
+                    <div class="timeline-meta">
+                        <span class="timeline-role">Data Scientist</span>
+                        <span class="timeline-time">August 2025 - Present</span>
                     </div>
-                    <h2 class="skill-sub-title project-title">Text Classification</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Bhuribhat/Text-Classification'">
-                            Github
-                        </button>
+                    <h3>Fastwork.co</h3>
+                    <p>Delivered 50+ freelance projects in Machine Learning and Data Science for academic and industry clients.
+                    </p>
+                    <ul>
+                        <li>Developed predictive models across multiple domains</li>
+                        <li>Built end-to-end ML pipelines for data processing, model training, and evaluation</li>
+                        <li>Designed interactive AI dashboards using Streamlit and Docker-based deployment</li>
+                        <li>Provided mentoring and technical consulting for undergraduate, master’s, and industry clients</li>
+                    </ul>
+                    <div class="timeline-tags">
+                        <span>Fastwork.co</span>
                     </div>
-                </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/project-6.png" alt="Project 6" class="project-img" />
+                </article>
+
+                <article class="timeline-item" data-reveal>
+                    <div class="timeline-meta">
+                        <span class="timeline-role">Teaching Assistant</span>
+                        <span class="timeline-time">January 2025 - Present</span>
                     </div>
-                    <h2 class="skill-sub-title project-title">Discord Bot</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Bhuribhat/Discord-Bot'">
-                            Github
-                        </button>
+                    <h3>Chulalongkorn University</h3>
+                    <p></p>
+                    <ul>
+                        <li>Teaching Assistant for Introduction to Data Science and Data Engineering</li>
+                        <li>Teaching Assistant for Data Science and Data Engineering Tools</li>
+                        <li>Teaching Assistant for Introduction to Data Science and Big Data</li>
+                    </ul>
+                    <div class="timeline-tags">
+                        <span>Chulalongkorn University</span>
+                        <span>Full Scholarship</span>
                     </div>
-                </div>
+                </article>
+
+                <article class="timeline-item" data-reveal>
+                    <div class="timeline-meta">
+                        <span class="timeline-role">Data Scientist</span>
+                        <span class="timeline-time">September 2024 - December 2024</span>
+                    </div>
+                    <h3>Agnos Health</h3>
+                    <p>Applied machine learning and data workflows to support practical healthcare-oriented solutions.
+                    </p>
+                    <ul>
+                        <li>Developed a predictive model using XGBoost regressor</li>
+                        <li>Implemented a recommender system algorithm</li>
+                        <li>Utilized Metabase dashboard</li>
+                        <li>Leveraged PostgreSQL to analyze data</li>
+                    </ul>
+                    <div class="timeline-tags">
+                        <span>Agnos Health</span>
+                    </div>
+                </article>
+
+                <article class="timeline-item" data-reveal>
+                    <div class="timeline-meta">
+                        <span class="timeline-role">Capstone Project</span>
+                        <span class="timeline-time">August 2023 - May 2024</span>
+                    </div>
+                    <h3>Reliable Domain-Specific Chatbot for Thai Language</h3>
+                    <p>Built a domain chatbot with LLMs, LangChain, RAG, and LINE deployment.</p>
+                    <ul>
+                        <li>LLM application design</li>
+                        <li>RAG implementation</li>
+                        <li>Fine-tuning dataset preparation</li>
+                        <li>Utilize HPC for finetuning LLMs</li>
+                    </ul>
+                    <div class="timeline-tags">
+                        <span>NECTEC</span>
+                        <span>DataMind</span>
+                        <span>Chulalongkorn University</span>
+                    </div>
+                </article>
+
+                <article class="timeline-item" data-reveal>
+                    <div class="timeline-meta">
+                        <span class="timeline-role">Machine Learning &amp; Computer Vision Engineer</span>
+                        <span class="timeline-time">May 2023 - July 2023</span>
+                    </div>
+                    <h3>Bit.studio Internship</h3>
+                    <p>Contributed to pose estimation, ASL fingerspelling, and video generation exploration.</p>
+                    <ul>
+                        <li>YOLO-based pose estimation</li>
+                        <li>ASL fingerspelling work</li>
+                        <li>Video generation experimentation</li>
+                    </ul>
+                    <div class="timeline-tags">
+                        <span>Bit.studio</span>
+                    </div>
+                </article>
             </div>
-        </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
-    </section>
-    <section id="contact">
-        <p class="section__text__p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-                <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-                <p><a href="mailto:bhuribhat@gmail.com">Bhuribhat@gmail.com</a></p>
+        </section>
+
+        <section class="section" id="projects">
+            <div class="section-heading" data-reveal>
+                <p class="eyebrow">Projects</p>
+                <h2>Interesting projects.</h2>
             </div>
-            <div class="contact-info-container">
-                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-                <p><a href="https://www.linkedin.com/in/bhuribhat-ratanasanguanvongs">LinkedIn</a></p>
+
+            <div class="project-grid">
+                <article class="project-card" data-reveal>
+                    <img src="./assets/project-1.gif" alt="Real-time Car Detection project preview">
+                    <div>
+                        <h3>Real-time Car Detection</h3>
+                        <p>Detection pipeline centered on speed, reliability, and visual feedback.</p>
+                        <a href="https://github.com/Bhuribhat/Vehicle-Detection-Project" target="_blank"
+                            rel="noreferrer">GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card" data-reveal>
+                    <img src="./assets/project-4.gif" alt="ASL fingerspelling keyboard project preview">
+                    <div>
+                        <h3>ASL Fingerspelling Keyboard</h3>
+                        <p>A real-time concept that turns visual recognition into a usable input flow.</p>
+                        <a href="https://github.com/Bhuribhat/ASL-Finger-Spelling-To-Text" target="_blank"
+                            rel="noreferrer">GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card" data-reveal>
+                    <img src="./assets/project-5.gif" alt="Video to Animation project preview">
+                    <div>
+                        <h3>Video to Animation</h3>
+                        <p>An experimental pipeline for stylized video transformation.</p>
+                        <a href="https://github.com/Bhuribhat/Intern_Video_To_8bit_Anime" target="_blank"
+                            rel="noreferrer">GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card" data-reveal>
+                    <img src="./assets/project-2.png" alt="Traffy Fondue Clustering project preview">
+                    <div>
+                        <h3>Traffy Fondue Clustering</h3>
+                        <p>Clustering workflow for issue discovery and visualization.</p>
+                        <a href="https://github.com/Bhuribhat/Traffy-Clustering" target="_blank"
+                            rel="noreferrer">GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card" data-reveal>
+                    <img src="./assets/project-3.png" alt="Text classification project preview">
+                    <div>
+                        <h3>Text Classification</h3>
+                        <p>Text modeling work with a clear practical framing.</p>
+                        <a href="https://github.com/Bhuribhat/Text-Classification" target="_blank"
+                            rel="noreferrer">GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card" data-reveal>
+                    <img src="./assets/project-6.png" alt="Discord bot project preview">
+                    <div>
+                        <h3>Discord Bot</h3>
+                        <p>Automation and community tooling with a focus on usability.</p>
+                        <a href="https://github.com/Bhuribhat/Discord-Bot" target="_blank" rel="noreferrer">GitHub</a>
+                    </div>
+                </article>
             </div>
-        </div>
-    </section>
-    <!-- <footer> -->
-    <div style="background-color: black;">
-        <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                    <li><a href="#about" style="color:white;">About</a></li>
-                    <li><a href="#skill" style="color:white;">Skills</a></li>
-                    <li><a href="#experience" style="color:white;">Experiences</a></li>
-                    <li><a href="#projects" style="color:white;">Projects</a></li>
-                    <li><a href="#contact" style="color:white;">Contact</a></li>
-                </ul>
+        </section>
+
+        <section class="section contact-section" id="contact">
+            <div class="section-heading" data-reveal>
+                <p class="eyebrow">Contact</p>
+                <h2>Contact Me</h2>
             </div>
-        </nav>
-        <div class="about-details-container">
-            <p style="align-self: center; margin-bottom: 10px;">
-                Copyright &#169; 2023 Bhuribhat Ratanasanguanvongs. All Rights Reserved.
-            </p>
-        </div>
-    </div>
+
+            <div class="contact-card" data-reveal>
+                <a href="mailto:bhuribhat@gmail.com">
+                    <span>Email</span>
+                    <strong>Bhuribhat@gmail.com</strong>
+                </a>
+                <a href="https://www.linkedin.com/in/bhuribhat-ratanasanguanvongs" target="_blank" rel="noreferrer">
+                    <span>LinkedIn</span>
+                    <strong>View profile</strong>
+                </a>
+                <a href="https://github.com/Bhuribhat" target="_blank" rel="noreferrer">
+                    <span>GitHub</span>
+                    <strong>Open projects</strong>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Bhuribhat Ratanasanguanvongs. All rights reserved.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 
